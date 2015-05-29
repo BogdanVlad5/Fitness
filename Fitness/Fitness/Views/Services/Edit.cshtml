@@ -1,0 +1,70 @@
+﻿@model Fitness.Models.Service
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Service</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.instructorName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.instructorName)
+            @Html.ValidationMessageFor(model => model.instructorName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cLength)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cLength)
+            @Html.ValidationMessageFor(model => model.cLength)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.timeTable)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.timeTable)
+            @Html.ValidationMessageFor(model => model.timeTable)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

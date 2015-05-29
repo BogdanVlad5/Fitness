@@ -1,0 +1,25 @@
+﻿@using Fitness.Models
+@{
+    ViewBag.Title = "Index";
+}
+
+<table cellpadding="2" cellspacing="2" border="1">
+    <tr>
+        <th>Course</th>
+        <th>Instructor</th>
+        <th>Price</th>
+        <th>Length</th>
+        <th>Timetable</th>
+    </tr>
+    @foreach (Service p in ViewBag.list)
+    {
+        <tr>
+            <td>@p.Name</td>
+            <td>@p.instructorName</td>
+            <td>@p.Price</td>
+            <td>@p.cLength</td>
+            <td>@p.Price</td>
+            <td align="center">@Html.ActionLink("Rezervare", "Rezervare", "Services", new { id = p.ID }, null)</td>
+        </tr>
+    }
+</table>

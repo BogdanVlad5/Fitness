@@ -1,0 +1,50 @@
+﻿@model Fitness.Models.Service
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Service</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.instructorName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.instructorName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cLength)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cLength)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.timeTable)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.timeTable)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

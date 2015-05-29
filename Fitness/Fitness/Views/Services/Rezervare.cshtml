@@ -1,0 +1,19 @@
+﻿@model Fitness.Models.RezervareModel
+@{
+    ViewBag.Title = "Rezervare";
+}
+
+<h2>Rezervare</h2>
+@using (Html.BeginForm("Rezervare", "Services", FormMethod.Post))
+{
+    
+@Html.Label("Course")
+@Html.TextBoxFor(model => model.Name)
+@Html.Label("Your name:")
+@Html.TextBoxFor(model => model.UName)
+@Html.Label("Email");
+@Html.TextBoxFor(model => model.Email)
+@Html.Label("Phone");
+@Html.TextBoxFor(model => model.Phone)
+<br/><input type="submit" value="Rezerva" />
+}
